@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>主页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./layui/css/layui.css" type="text/css">
+    <script src="./layui/layui.js"></script>
+	<script src="./js/jquery.min.js"></script>
+    <script>
+    layui.use('element', function(){
+      var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块
+
+      //监听导航点击
+      element.on('nav(demo)', function(elem){
+        //console.log(elem)
+        layer.msg(elem.text());
+      });
+    });
+    </script>
+
+    <style>
+       .topDiv{
+
+          width: auto;
+          height: 10rem ;
+          background: #ccc;
+          text-align: center;
+          font-size: 5rem;
+          line-height: 10rem;
+
+       }
+
+       .layui-layout-left li{
+
+         margin-left: 2rem;
+       }
+       .layui-nav-item a{
+
+          font-size: 1rem;
+       }
+
+       .layui-side {
+         margin-top:10rem;
+       }
+       .layui-body{
+
+         margin-top:10rem;
+       }
+
+       .home-plutform{
+
+          width: 100%;
+          height: 100%;
+          margin-top: 0;
+
+          text-align: center;
+          //background-color: #009688;
+          border-radius: 0%;
+       }
+
+       .layui-row, .cell-div img {
+
+
+          height:8rem;
+
+       }
+
+	   .cell-div{
+
+		 border:2px solid #ccc;
+
+	   }
+
+       .layui-row {
+
+          padding-top: 3rem;
+
+       }
+    </style>
+
+  </head>
+  <body>
+<div class="topDiv">
+        <!-- //长春禄中央太空舱青年旅社 -->
+</div>
+
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo">LuDi</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item layui-this"><a  href="">房务</a></li>
+      <li class="layui-nav-item"><a  href="">消费</a></li>
+      <li class="layui-nav-item"><a  href="">结算</a></li>
+      <li class="layui-nav-item"><a  href="">管理</a></li>
+      <li class="layui-nav-item"><a  href="">统计</a></li>
+      <li class="layui-nav-item">
+        <a  href="javascript:;">其它系统</a>
+        <dl class="layui-nav-child">
+          <dd><a href="">邮件管理</a></dd>
+          <dd><a href="">消息管理</a></dd>
+          <dd><a href="">授权管理</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+          @JZ
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="">退了</a></li>
+    </ul>
+  </div>
+
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item layui-nav-itemed">
+          <a class="" href="javascript:;" >预约入住</a>
+          <!--
+            房屋类别数量自动加载此竖状导航条目
+          -->
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:void(0);" onclick="jumpPage('./scanInfo.html')">VIP  &nbsp; $ 大佬来了</a></dd>
+            <dd><a href="javascript:;">女客 &nbsp; ~ 嘤嘤嘤</a></dd>
+            <dd><a href="javascript:;">男客 &nbsp; ! 呦吼吼</a></dd>
+            <dd><a href="javascript:void(0);" onclick="jumpPage('./selectInfo.html')">预约查询 &nbsp; </a></dd>
+            <dd><a href="">…</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">马上入住</a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">男宾</a></dd>
+            <dd><a href="javascript:;">女宾</a></dd>
+            <dd><a href="javascript:void(0);" >vip</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item"><a href="">我要退房</a></li>
+        <li class="layui-nav-item"><a href="">…</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="layui-body">
+    <!-- 内容主体区域 ,在此处动态加载房间信息，及状态，前期手动展示效果-->
+
+
+      <div class="home-plutform">
+
+        <div class="layui-row">
+
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a ><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+
+        </div>
+
+
+
+
+        <div class="layui-row">
+
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+
+          <div class="layui-col-xs2">
+            <div class="cell-div">
+              <a><img src="./icon/房子.png" alt="图挂了"></a>
+              <p>编号：101</p>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+
+  </div>
+
+  <div class="layui-footer">
+    <div style="float:right;font-family:微软雅黑">
+		<!-- 底部固定区域 -->
+		&nbsp;&nbsp;&nbsp;© &nbsp;www.2jz.com &nbsp;&nbsp;&nbsp;- &nbsp;&nbsp;&nbsp;禄地中央青年旅社&nbsp;&nbsp;&nbsp;
+	</div>
+  </div>
+</div>
+<script>
+	//JavaScript代码区域
+  var table ;
+  var form  ;
+  var laydate ;
+
+	layui.use(['form', 'table', 'laydate'], function(){
+	     form = layui.form,
+       laydate = layui.laydate;
+
+   table = layui.table,
+	$(".cell-div").hover(function(){
+
+		//border:2px solid #ccc
+		$(this).css("border","3.5px solid #000");
+
+	},function(){
+
+		//alert(456);
+		$(this).css("border","2px solid #ccc");
+
+	});
+
+	$(document).ready(function(){
+
+		$(".cell-div").click(function(){
+
+			$(".layui-body").load("./reserveCell.html",function(){
+
+					//日期
+				  laydate.render({
+					elem: '#date1',
+					type: 'datetime',
+					value: new Date(),
+					min:0,
+					max:7
+
+				  });
+
+
+				form.render();
+
+			});
+		});
+
+	});
+
+	});
+
+  function jumpPage(target){
+      //alert(target);
+      $(".layui-body").load(target,function(){
+
+        form.render();
+        //日期
+        laydate.render({
+        elem: '#date1',
+        type: 'datetime',
+        value: new Date(),
+        min:0,
+        max:7
+
+        });
+        //第一个实例
+        table.render({
+          elem: '#orderInfo'
+          ,height: 280
+          ,url: './www.layui.com.json' //数据接口
+          ,page: false //开启分页
+          ,cols: [[ //表头
+            {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}
+            ,{field: 'username', title: '用户名', width:80}
+            ,{field: 'sex', title: '性别', width:80, sort: true}
+            ,{field: 'city', title: '城市', width:80}
+            ,{field: 'sign', title: '签名', width: 177}
+            ,{field: 'experience', title: '积分', width: 80, sort: true}
+            ,{field: 'score', title: '评分', width: 80, sort: true}
+            ,{field: 'classify', title: '职业', width: 80}
+            ,{field: 'wealth', title: '财富', width: 135, sort: true}
+          ]]
+        });
+      });
+
+  }
+	//alert(999);
+
+</script>
+</body>
+</html>

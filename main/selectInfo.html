@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./layui/css/layui.css" type="text/css">
+    <script src="./layui/layui.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <style media="screen">
+
+        .layui-row{
+
+            height:auto;
+            padding-top:2rem;
+
+        }
+    </style>
+  </head>
+  <body>
+
+    		<div class="plutform">
+
+            <div class="layui-row">
+            <form class="layui-form" action="index.html" method="post">
+
+                  <div class="layui-col-xs3 layui-col-xs-offset4">
+                    <input class="layui-input" placeholder="姓名/证件号/手机号" type="text" name="" value="">
+                  </div>
+                  <div class="layui-col-xs3">
+                    <button class="layui-btn" type="button" name="button">检索</button>
+                  </div>
+
+            </form>
+          </div>
+
+            <div class="layui-row">
+            <table id="orderInfo" lay-filter="test"></table>
+
+            </div>
+
+        </div>
+
+        <script>
+        layui.use('table', function(){
+
+
+        });
+      </script>
+  </body>
+</html>
