@@ -57,17 +57,9 @@
 					</div>
 
 					<div class="layui-col-xs3">
-
-						<label class="">证件类别：</label>
-
+            <label class="">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
 						<div class="layui-input-inline">
-						  <select name="interest" lay-filter="">
-							<option value="0" selected="">身份证</option>
-							<option value="1">护照</option>
-							<option value="2">军官证</option>
-							<option value="3">学生证</option>
-							<option value="4">…</option>
-						  </select>
+							<input name="title" lay-verify="identity" autocomplete="off" placeholder="姓名" class="layui-input" type="text">
 						</div>
 					</div>
 
@@ -86,6 +78,23 @@
 
 				<div class="layui-row row2">
 
+
+          <div class="layui-col-xs4">
+
+            <label class="layui-form-label">证件类别：</label>
+
+            <div class="layui-input-inline">
+              <select name="interest" lay-filter="">
+              <option value="0" selected="">身份证</option>
+              <option value="1">护照</option>
+              <option value="2">军官证</option>
+              <option value="3">学生证</option>
+              <option value="4">…</option>
+              </select>
+            </div>
+
+          </div>
+
 					<div class="layui-col-xs3 ">
 
 						<label class="layui-form-label">房间号：</label>
@@ -95,14 +104,7 @@
 
 					</div>
 
-					<div class="layui-col-xs3">
 
-						<label class="">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
-						<div class="layui-input-inline">
-							<input name="title" lay-verify="identity" autocomplete="off" placeholder="姓名" class="layui-input" type="text">
-						</div>
-
-					</div>
 
 					<div class="layui-col-xs4">
 
@@ -119,6 +121,21 @@
 
 				<div class="layui-row row3">
 
+          <div class="layui-col-xs4">
+
+            <label class="layui-form-label">客源入口：</label>
+
+            <div class="layui-input-inline">
+                <select name="interest" lay-filter="">
+                <option value="">携程</option>
+                <option value="0" selected="">飞猪</option>
+                <option value="1">美团</option>
+                <option value="2">其他</option>
+                </select>
+            </div>
+
+          </div>
+
 					<div class="layui-col-xs3">
 
 						<label class="layui-form-label">入住时间：</label>
@@ -133,7 +150,7 @@
 
 
           	<div class="layui-col-xs4">
-    					<label class="">入住天数:</label>
+    					<label class="layui-form-label">入住天数：</label>
     					<div class="layui-input-inline">
     						  <select name="interest" lay-filter="">
     							<option value="">1</option>
@@ -150,7 +167,7 @@
 				<div class="layui-row row4">
 
           <div class="layui-col-xs4">
-            <label class="layui-form-label">付款方式:</label>
+            <label class="layui-form-label">付款方式：</label>
             <div class="layui-input-inline">
                 <select name="interest" lay-filter="">
                 <option value="">现金</option>
@@ -167,7 +184,7 @@
 						</div>
 					</div>
 
-					<div class="layui-col-xs3">
+					<div class="layui-col-xs3 ">
 
 						  <button class="layui-btn" lay-submit="" lay-filter="demo1">提交</button>
 						  <button class="layui-btn layui-btn-primary" lay-submit="" lay-filter="demo2">取消</button>
